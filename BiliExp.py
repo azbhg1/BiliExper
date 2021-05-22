@@ -165,12 +165,12 @@ if __name__=="__main__":
         elif opt == '-v':
             print(f'BiliExp v{main_version_str}')
             sys.exit()
-while True: #死循环 每一个小时运行一次配置
-    main(**kwargs)
-    time.sleep(3600)
+# while True: #死循环 每一个小时运行一次配置
+#     main(**kwargs)
+#     time.sleep(3600)
 
-# while True: #每天某个时间段运行配置
-#     time_now = time.strftime("%H:%M:%S", time.localtime()) # 刷新
-#     if time_now == "11:30:00": #此处设置每天定时的时间
-#         main(**kwargs)
-#         time.sleep(2) # 因为以秒定时，所以暂停2秒，使之不会在1秒内执行多次
+while True: #每天某个时间段运行配置
+    time_now = time.strftime("%H:%M:%S", time.localtime()) # 刷新
+    if time_now == "21:30:00": #此处设置每天定时的时间
+        main(**kwargs)
+        time.sleep(2) # 因为以秒定时，所以暂停2秒，使之不会在1秒内执行多次
