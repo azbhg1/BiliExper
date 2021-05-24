@@ -3,7 +3,7 @@
 {
     "version": "1.2.1", // 配置文件版本,严禁修改
     "http_header": {    // http头部，访问B站时使用  注:User-Agent建议改为常用的浏览器ua(下面是google浏览器)，其他的不改
-    	"User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+    	"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36 Edg/90.0.818.66",
     	"Referer": "https://www.bilibili.com/",
     	"Connection": "keep-alive"
     },
@@ -44,7 +44,7 @@
                                               */
             "delay": 0,          //延迟，值为整数(单位秒)，每参与一次天选时刻延迟运行
             "room_filter": [],   //直播间黑名单，值为整数数组，指定直播间的天选将不会参与
-            "gift_filter": [],   //礼物名称黑名单，值为字符串数组，排除掉一些不需要参与的礼物
+            "gift_filter": ['代金券','照片','签名照','舰'],   //礼物名称黑名单，值为字符串数组，排除掉一些不需要参与的礼物
             "danmu_filter": [],  //弹幕过滤关键字，值为字符串数组，弹幕包含此值会被过滤
             "price_limit": 0,            //金瓜子上限，值为整数，投喂金瓜子超过此值会被过滤
             "unfollow": true,            //等待参与的天选结束后取消关注，值为true或false分别代表开启和关闭，仅在需要关注主播时有效
